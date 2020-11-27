@@ -23,8 +23,7 @@ namespace app.Controllers
 
         private string GetEnvironmentVariable(string name)
         {
-            _logger.LogInformation($"Getting environment variable '{name}'.");
-            Console.WriteLine(name);
+            _logger.LogInformation($"Getting environment variable '{name}'.");            
             return Environment.GetEnvironmentVariable(name.ToLower()) ?? Environment.GetEnvironmentVariable(name.ToUpper());            
         }
     }
